@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "ООО 'Мероприятия плюс'",
+      "contact": "info@eventsplus.com",
+      "events": [101, 102]
+    },
+    {
+      "id": 2,
+      "name": "ИП Иванов",
+      "contact": "ivanov@example.com",
+      "events": [103, 104]
+    }
+  ]
+  

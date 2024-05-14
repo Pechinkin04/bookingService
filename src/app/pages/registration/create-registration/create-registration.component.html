@@ -1,0 +1,27 @@
+<h2>Создать новую регистрацию</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="eventId">ID мероприятия:</label>
+    <input type="number" class="form-control" id="eventId" name="eventId" [(ngModel)]="eventId" required>
+  </div>
+  <div class="form-group">
+    <label for="clientName">Имя клиента:</label>
+    <input type="text" class="form-control" id="clientName" name="clientName" [(ngModel)]="clientName" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+  </div>
+  <div class="form-group">
+    <label for="ticketCount">Количество билетов:</label>
+    <input type="number" class="form-control" id="ticketCount" name="ticketCount" [(ngModel)]="ticketCount" required>
+  </div>
+  <div class="form-group">
+    <label for="status">Статус:</label>
+    <select class="form-control" id="status" name="status" [(ngModel)]="status" required>
+      <option *ngFor="let statusOption of registrationStatusOptions" [value]="statusOption">{{ statusOption }}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Создать</button>
+</form>

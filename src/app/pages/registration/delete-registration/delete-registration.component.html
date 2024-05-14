@@ -1,0 +1,15 @@
+<div class="confirm-delete-container">
+  <h2>Подтвердить удаление регистрации</h2>
+
+  <div *ngIf="registration">
+    <p><strong>ID мероприятия:</strong> {{ registration.eventId }}</p>
+    <p><strong>Имя клиента:</strong> {{ registration.clientName }}</p>
+    <p><strong>Email:</strong> {{ registration.email }}</p>
+    <p><strong>Количество билетов:</strong> {{ registration.ticketCount }}</p>
+    <p><strong>Статус:</strong> {{ registration.status }}</p>
+  </div>
+
+  <p>Вы уверены, что хотите удалить эту регистрацию?</p>
+  <button class="btn-delete" (click)="delete()">Удалить</button>
+  <button class="btn-cancel" (click)="cancel()">Отмена</button>
+</div>

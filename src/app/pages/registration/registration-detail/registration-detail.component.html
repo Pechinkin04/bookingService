@@ -1,0 +1,16 @@
+<div class="registration-details-container">
+  <h2>Детали регистрации</h2>
+
+  <div *ngIf="registration" class="registration-details">
+    <p><strong>ID мероприятия:</strong> {{ registration.eventId }}</p>
+    <p><strong>Имя клиента:</strong> {{ registration.clientName }}</p>
+    <p><strong>Email:</strong> {{ registration.email }}</p>
+    <p><strong>Количество билетов:</strong> {{ registration.ticketCount }}</p>
+    <p><strong>Статус:</strong> {{ registration.status }}</p>
+  </div>
+
+  <div class="buttons-container">
+    <button class="btn btn-primary" (click)="goBack()">Назад</button>
+    <button class="btn btn-secondary" (click)="editRegistration()">Редактировать</button>
+  </div>
+</div>

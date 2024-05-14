@@ -1,0 +1,16 @@
+<div class="events-header">
+  <h2>Список организаторов мероприятий</h2>
+  <button routerLink="/create-organizer" class="create-event-button">Создать организатора</button>
+</div>
+
+<ul class="organizer-list">
+  <li *ngFor="let organizer of organizers" class="organizer-item">
+    <h3>{{ organizer.name }}</h3>
+    <p><strong>Контактная информация:</strong> {{ organizer.contact }}</p>
+    <p><strong>Мероприятия:</strong> {{ organizer.events.join(', ') }}</p>
+    <div class="button-group">
+      <button (click)="onDelete(organizer.id)" class="delete-button">Удалить</button>
+      <a [routerLink]="['/edit-organizer', organizer.id]" class="edit-link">Редактировать</a>
+    </div>
+  </li>
+</ul>

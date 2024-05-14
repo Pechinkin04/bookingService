@@ -1,0 +1,18 @@
+<div class="events-header">
+  <h2>Список мероприятий</h2>
+  <button routerLink="/create" class="create-event-button">Создать мероприятие</button>
+</div>
+
+<ul class="event-list">
+  <li *ngFor="let event of events" class="event-item">
+    <h3>{{ event.title }}</h3>
+    <p><strong>Дата:</strong> {{ event.date | date }}</p>
+    <p><strong>Время:</strong> {{ event.time }}</p>
+    <p><strong>Место:</strong> {{ event.location }}</p>
+    <p><strong>Описание:</strong> {{ event.description }}</p>
+    <div class="button-group">
+      <button (click)="deleteEvent(event.id)" class="delete-button">Удалить</button>
+      <a [routerLink]="['/edit', event.id]" class="edit-link">Редактировать</a>
+    </div>
+  </li>
+</ul>

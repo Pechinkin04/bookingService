@@ -1,0 +1,27 @@
+<div class="edit-event-container">
+  <p class="edit-event-header">Редактировать мероприятие</p>
+
+  <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
+    <div class="form-group">
+      <label for="title">Название:</label>
+      <input type="text" class="form-control" id="title" name="title" [(ngModel)]="event.title" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Дата:</label>
+      <input type="date" class="form-control" id="date" name="date" [(ngModel)]="event.date" required>
+    </div>
+    <div class="form-group">
+      <label for="time">Время:</label>
+      <input type="time" class="form-control" id="time" name="time" [(ngModel)]="event.time" required>
+    </div>
+    <div class="form-group">
+      <label for="location">Место:</label>
+      <input type="text" class="form-control" id="location" name="location" [(ngModel)]="event.location" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Описание:</label>
+      <textarea class="form-control" id="description" name="description" [(ngModel)]="event.description" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="eventForm.invalid">Сохранить</button>
+  </form>
+</div>

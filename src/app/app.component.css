@@ -1,0 +1,63 @@
+nav {
+    background-color: #000000; /* Цвет фона */
+    padding: 10px; /* Внутренний отступ */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-left, .nav-center, .nav-right {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nav-left {
+    margin-right: auto;
+  }
+  
+  .nav-right {
+    margin-left: auto;
+  }
+  
+  
+  nav a {
+    color: white; /* Цвет текста */
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-right: 20px; /* Отступ справа между ссылками */
+  }
+  
+  #events-link,
+  #create-link {
+    color: #4caf50; /* Зеленый цвет для ссылок "Список мероприятий" и "Создать мероприятие" */
+  }
+  
+  #registration-link,
+  #create-registration-link {
+    color: #2196f3; /* Синий цвет для ссылок "Список регистрации" и "Создать регистрацию" */
+  }
+  
+  #organizer-list-link,
+  #create-organizer-link {
+    color: #e91e63; /* Розовый цвет для ссылок "Список организаторов" и "Создать организатора" */
+  }
+  
+  nav a:hover {
+    color: #ffc107; /* Цвет текста при наведении */
+  }
+  
+  #events-link:hover,
+  #create-link:hover  {
+    color: #76ff03; 
+  }
+  
+  #registration-link:hover,
+  #create-registration-link:hover {
+    color: #40c4ff; 
+  }
+  
+  #organizer-list-link:hover,
+  #create-organizer-link:hover {
+    color: #ff4081; 
+  }
+  

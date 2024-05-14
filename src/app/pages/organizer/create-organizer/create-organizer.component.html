@@ -1,0 +1,17 @@
+<h2>Создать нового организатора</h2>
+
+<form (ngSubmit)="onSubmit(organizerForm)" #organizerForm="ngForm">
+  <div class="form-group">
+    <label for="name">Название организации:</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="organizer.name" required>
+  </div>
+  <div class="form-group">
+    <label for="contact">Почта организации:</label>
+    <input type="email" class="form-control" id="contact" name="contact" [(ngModel)]="organizer.contact" required>
+  </div>
+  <div class="form-group">
+    <label for="events">Индексы мероприятий (через запятую):</label>
+    <input type="text" class="form-control" id="events" name="events" [(ngModel)]="eventsString">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="organizerForm.invalid">Создать</button>
+</form>

@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "eventId": 101,
+      "clientName": "Иван Иванов",
+      "email": "ivan@example.com",
+      "ticketCount": 2,
+      "status": "Оплачено"
+    },
+    {
+      "id": 2,
+      "eventId": 102,
+      "clientName": "Мария Петрова",
+      "email": "maria@example.com",
+      "ticketCount": 1,
+      "status": "Зарегистрировано"
+    },
+    {
+      "id": 3,
+      "eventId": 103,
+      "clientName": "Алексей Смирнов",
+      "email": "alex@example.com",
+      "ticketCount": 3,
+      "status": "Ожидание оплаты"
+    }
+]
